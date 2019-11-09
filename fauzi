@@ -1,0 +1,61 @@
+m="�[31;1m"
+b="�[34;1m"
+h="�[32;1m"
+k="�[33;1m"
+p="�[39;1m"
+c="�[36;1m"
+termux-setup-storage
+load(){
+printf "${p}[${c}•${p}]${m}Scaning${p}"
+sleep 1
+printf "."
+sleep 1
+printf "."
+sleep 1
+printf "."
+sleep 1
+printf ".
+"
+}
+chek(){
+if [ ! -z $(command -v curl) ];then
+printf " "
+else
+clear
+pkg install curl -y
+printf "${p}[${h}√${p}]${h}Curl Sdh Terinstall"
+sleep 1
+fi
+if [ ! -z $(command -v wget) ];then
+printf " "
+else
+clear
+pkg install wget
+printf "${p}[${h}√${p}]${h}Wget Sdh Terinstall"
+sleep 1
+fi
+if [ ! -z $(command -v bash) ];then
+printf " "
+else
+clear
+pkg install bash
+printf "${p}[${h}√${p}]${h}Bash Sdh Terinstall"
+sleep 1
+fi
+}
+chek
+banner(){ printf "
+${p} ███████${m}╗${p}███████${m}╗${p}██${m}╗${p}██${m}╗ ${p} ███████${m}╗
+${p} ██${m}╔════╝${p}██${m}╔════╝${p}██${m}║${p}██${m}║ ${p} ██${m}╔════╝
+${p} ███████${m}╗${p}█████${m}╗${p} ██${m}║${p}██${m}║ ${p} █████${m}╗
+${m} ╚════${p}██${m}║${p}██${m}╔══╝ ${p}██${m}║${p}██${m}║ ${p} ██${m}╔══╝
+${p} ███████${m}║${p}██${m}║ ${p} ██${m}║${p}███████${m}╗${p}███████${m}╗${p}•mobie
+${m} ╚══════╝╚═╝ ╚═╝╚══════╝╚══════╝
+${c} Auto Downloader Config${m}|${c}HTTP Injector
+${b} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${h}ஜ۩��۩ஜ${b}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+${p} Author${m}:${p}Alfauzi-KS${b} Feat ${p}NuronaDMY
+${p} Black Coder Crush ${m}| ${p}Black Hole Scurity
+${p} Create${m}:${p}10-11-2019${m}|${p}Versi${m}:${p}3.1
+${b} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+"
+}
